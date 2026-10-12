@@ -112,6 +112,7 @@ def plot_qq_with_ci(data, dist_name, ax=None, alpha=0.05, engine='matplotlib'):
         return
 
     # Renderização via Seaborn
+    sns.set_theme()
     if engine == 'seaborn':
         sns.set_theme(style="whitegrid")
         sns.scatterplot(x=theo_quantiles, y=sorted_data, color='#1f77b4',
